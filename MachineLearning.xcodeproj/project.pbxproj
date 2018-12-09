@@ -7,21 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4475E7C0F345CF3109B303AC /* Pods_MachineLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BDC7657EA8A19649EB1AAC /* Pods_MachineLearning.framework */; };
+		5A54851E21BAC82200F5C50E /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A54851D21BAC82200F5C50E /* GameLogic.swift */; };
+		5A54852021BAC92700F5C50E /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A54851F21BAC92700F5C50E /* Operation.swift */; };
 		5A58E36621B69DC0007C70FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E36521B69DC0007C70FB /* AppDelegate.swift */; };
 		5A58E36821B69DC0007C70FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E36721B69DC0007C70FB /* ViewController.swift */; };
-		5A58E36B21B69DC0007C70FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A58E36921B69DC0007C70FB /* Main.storyboard */; };
 		5A58E36D21B69DC1007C70FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A58E36C21B69DC1007C70FB /* Assets.xcassets */; };
 		5A58E37021B69DC1007C70FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A58E36E21B69DC1007C70FB /* LaunchScreen.storyboard */; };
+		5A58E37921B69E59007C70FB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E37721B69E59007C70FB /* MainViewController.swift */; };
+		5A58E37A21B69E59007C70FB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A58E37821B69E59007C70FB /* MainViewController.xib */; };
+		5A58E37C21B6A195007C70FB /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E37B21B6A195007C70FB /* CanvasView.swift */; };
+		5A7390B321BA66E100CE6A86 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7390B221BA66E100CE6A86 /* Extensions.swift */; };
+		5A822E9E21BA6E9800AC6907 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A822E9D21BA6E9800AC6907 /* Requests.swift */; };
+		5A822EA021BA705A00AC6907 /* UidDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A822E9F21BA705A00AC6907 /* UidDef.swift */; };
+		5A822EA221BA707E00AC6907 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A822EA121BA707E00AC6907 /* Utils.swift */; };
+		5A822EA421BA77AC00AC6907 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A822EA321BA77AC00AC6907 /* RoundedView.swift */; };
+		5A822EA621BA85F500AC6907 /* MachineLearningTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A822EA521BA85F500AC6907 /* MachineLearningTabBarController.swift */; };
+		5A822EA921BA869600AC6907 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A822EA721BA869600AC6907 /* GameViewController.swift */; };
+		5A822EAA21BA869600AC6907 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A822EA821BA869600AC6907 /* GameViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50A5B32A3D57FAB903EC2A41 /* Pods-MachineLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MachineLearning.release.xcconfig"; path = "Pods/Target Support Files/Pods-MachineLearning/Pods-MachineLearning.release.xcconfig"; sourceTree = "<group>"; };
+		5A54851D21BAC82200F5C50E /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		5A54851F21BAC92700F5C50E /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		5A58E36221B69DC0007C70FB /* MachineLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MachineLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A58E36521B69DC0007C70FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A58E36721B69DC0007C70FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5A58E36A21B69DC0007C70FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A58E36C21B69DC1007C70FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A58E36F21B69DC1007C70FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A58E37121B69DC1007C70FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A58E37721B69E59007C70FB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5A58E37821B69E59007C70FB /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		5A58E37B21B6A195007C70FB /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		5A7390B221BA66E100CE6A86 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5A822E9D21BA6E9800AC6907 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		5A822E9F21BA705A00AC6907 /* UidDef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UidDef.swift; sourceTree = "<group>"; };
+		5A822EA121BA707E00AC6907 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		5A822EA321BA77AC00AC6907 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		5A822EA521BA85F500AC6907 /* MachineLearningTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineLearningTabBarController.swift; sourceTree = "<group>"; };
+		5A822EA721BA869600AC6907 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5A822EA821BA869600AC6907 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		65FB92E0FC8D35A5938E555A /* Pods-MachineLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MachineLearning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MachineLearning/Pods-MachineLearning.debug.xcconfig"; sourceTree = "<group>"; };
+		78BDC7657EA8A19649EB1AAC /* Pods_MachineLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MachineLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4475E7C0F345CF3109B303AC /* Pods_MachineLearning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +69,8 @@
 			children = (
 				5A58E36421B69DC0007C70FB /* MachineLearning */,
 				5A58E36321B69DC0007C70FB /* Products */,
+				6578F4F810D90BB8E7014730 /* Pods */,
+				C661B7D160837E1511853B1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +87,41 @@
 			children = (
 				5A58E36521B69DC0007C70FB /* AppDelegate.swift */,
 				5A58E36721B69DC0007C70FB /* ViewController.swift */,
-				5A58E36921B69DC0007C70FB /* Main.storyboard */,
 				5A58E36C21B69DC1007C70FB /* Assets.xcassets */,
 				5A58E36E21B69DC1007C70FB /* LaunchScreen.storyboard */,
 				5A58E37121B69DC1007C70FB /* Info.plist */,
+				5A58E37721B69E59007C70FB /* MainViewController.swift */,
+				5A58E37821B69E59007C70FB /* MainViewController.xib */,
+				5A58E37B21B6A195007C70FB /* CanvasView.swift */,
+				5A7390B221BA66E100CE6A86 /* Extensions.swift */,
+				5A822E9D21BA6E9800AC6907 /* Requests.swift */,
+				5A822E9F21BA705A00AC6907 /* UidDef.swift */,
+				5A822EA121BA707E00AC6907 /* Utils.swift */,
+				5A822EA321BA77AC00AC6907 /* RoundedView.swift */,
+				5A822EA521BA85F500AC6907 /* MachineLearningTabBarController.swift */,
+				5A822EA721BA869600AC6907 /* GameViewController.swift */,
+				5A822EA821BA869600AC6907 /* GameViewController.xib */,
+				5A54851D21BAC82200F5C50E /* GameLogic.swift */,
+				5A54851F21BAC92700F5C50E /* Operation.swift */,
 			);
 			path = MachineLearning;
+			sourceTree = "<group>";
+		};
+		6578F4F810D90BB8E7014730 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65FB92E0FC8D35A5938E555A /* Pods-MachineLearning.debug.xcconfig */,
+				50A5B32A3D57FAB903EC2A41 /* Pods-MachineLearning.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C661B7D160837E1511853B1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78BDC7657EA8A19649EB1AAC /* Pods_MachineLearning.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A58E37421B69DC1007C70FB /* Build configuration list for PBXNativeTarget "MachineLearning" */;
 			buildPhases = (
+				0009EA00F72E66CC2665A2C8 /* [CP] Check Pods Manifest.lock */,
 				5A58E35E21B69DBF007C70FB /* Sources */,
 				5A58E35F21B69DBF007C70FB /* Frameworks */,
 				5A58E36021B69DBF007C70FB /* Resources */,
+				2049365C14B3EFAA9CC23D85 /* [CP] Embed Pods Frameworks */,
+				DEF178C8C73341813AA63C16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,35 +185,95 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A822EAA21BA869600AC6907 /* GameViewController.xib in Resources */,
 				5A58E37021B69DC1007C70FB /* LaunchScreen.storyboard in Resources */,
 				5A58E36D21B69DC1007C70FB /* Assets.xcassets in Resources */,
-				5A58E36B21B69DC0007C70FB /* Main.storyboard in Resources */,
+				5A58E37A21B69E59007C70FB /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0009EA00F72E66CC2665A2C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MachineLearning-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2049365C14B3EFAA9CC23D85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MachineLearning/Pods-MachineLearning-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MachineLearning/Pods-MachineLearning-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF178C8C73341813AA63C16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MachineLearning/Pods-MachineLearning-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A58E35E21B69DBF007C70FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7390B321BA66E100CE6A86 /* Extensions.swift in Sources */,
+				5A58E37921B69E59007C70FB /* MainViewController.swift in Sources */,
+				5A822EA421BA77AC00AC6907 /* RoundedView.swift in Sources */,
 				5A58E36821B69DC0007C70FB /* ViewController.swift in Sources */,
+				5A58E37C21B6A195007C70FB /* CanvasView.swift in Sources */,
 				5A58E36621B69DC0007C70FB /* AppDelegate.swift in Sources */,
+				5A54851E21BAC82200F5C50E /* GameLogic.swift in Sources */,
+				5A822EA621BA85F500AC6907 /* MachineLearningTabBarController.swift in Sources */,
+				5A822E9E21BA6E9800AC6907 /* Requests.swift in Sources */,
+				5A822EA021BA705A00AC6907 /* UidDef.swift in Sources */,
+				5A54852021BAC92700F5C50E /* Operation.swift in Sources */,
+				5A822EA921BA869600AC6907 /* GameViewController.swift in Sources */,
+				5A822EA221BA707E00AC6907 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5A58E36921B69DC0007C70FB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A58E36A21B69DC0007C70FB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5A58E36E21B69DC1007C70FB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,6 +403,7 @@
 		};
 		5A58E37521B69DC1007C70FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65FB92E0FC8D35A5938E555A /* Pods-MachineLearning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +422,7 @@
 		};
 		5A58E37621B69DC1007C70FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50A5B32A3D57FAB903EC2A41 /* Pods-MachineLearning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
