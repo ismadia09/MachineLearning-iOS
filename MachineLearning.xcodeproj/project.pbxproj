@@ -25,6 +25,8 @@
 		5A822EA621BA85F500AC6907 /* MachineLearningTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A822EA521BA85F500AC6907 /* MachineLearningTabBarController.swift */; };
 		5A822EA921BA869600AC6907 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A822EA721BA869600AC6907 /* GameViewController.swift */; };
 		5A822EAA21BA869600AC6907 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A822EA821BA869600AC6907 /* GameViewController.xib */; };
+		7A3ED94C21C0067D0070DC38 /* OperationsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3ED94A21C0067D0070DC38 /* OperationsCollectionViewCell.swift */; };
+		7A3ED94D21C0067D0070DC38 /* OperationsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A3ED94B21C0067D0070DC38 /* OperationsCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		5A822EA821BA869600AC6907 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		65FB92E0FC8D35A5938E555A /* Pods-MachineLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MachineLearning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MachineLearning/Pods-MachineLearning.debug.xcconfig"; sourceTree = "<group>"; };
 		78BDC7657EA8A19649EB1AAC /* Pods_MachineLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MachineLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A3ED94A21C0067D0070DC38 /* OperationsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsCollectionViewCell.swift; sourceTree = "<group>"; };
+		7A3ED94B21C0067D0070DC38 /* OperationsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationsCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 				5A822EA521BA85F500AC6907 /* MachineLearningTabBarController.swift */,
 				5A822EA721BA869600AC6907 /* GameViewController.swift */,
 				5A822EA821BA869600AC6907 /* GameViewController.xib */,
+				7A3ED94A21C0067D0070DC38 /* OperationsCollectionViewCell.swift */,
+				7A3ED94B21C0067D0070DC38 /* OperationsCollectionViewCell.xib */,
 				5A54851D21BAC82200F5C50E /* GameLogic.swift */,
 				5A54851F21BAC92700F5C50E /* Operation.swift */,
 			);
@@ -136,7 +142,6 @@
 				5A58E35F21B69DBF007C70FB /* Frameworks */,
 				5A58E36021B69DBF007C70FB /* Resources */,
 				2049365C14B3EFAA9CC23D85 /* [CP] Embed Pods Frameworks */,
-				DEF178C8C73341813AA63C16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A822EAA21BA869600AC6907 /* GameViewController.xib in Resources */,
+				7A3ED94D21C0067D0070DC38 /* OperationsCollectionViewCell.xib in Resources */,
 				5A58E37021B69DC1007C70FB /* LaunchScreen.storyboard in Resources */,
 				5A58E36D21B69DC1007C70FB /* Assets.xcassets in Resources */,
 				5A58E37A21B69E59007C70FB /* MainViewController.xib in Resources */,
@@ -233,21 +239,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MachineLearning/Pods-MachineLearning-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DEF178C8C73341813AA63C16 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MachineLearning/Pods-MachineLearning-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,6 +248,7 @@
 			files = (
 				5A7390B321BA66E100CE6A86 /* Extensions.swift in Sources */,
 				5A58E37921B69E59007C70FB /* MainViewController.swift in Sources */,
+				7A3ED94C21C0067D0070DC38 /* OperationsCollectionViewCell.swift in Sources */,
 				5A822EA421BA77AC00AC6907 /* RoundedView.swift in Sources */,
 				5A58E36821B69DC0007C70FB /* ViewController.swift in Sources */,
 				5A58E37C21B6A195007C70FB /* CanvasView.swift in Sources */,

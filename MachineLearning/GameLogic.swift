@@ -12,12 +12,15 @@ import Foundation
 class GameLogic {
     var operations : [Operation] = []
     func generateOperations(nbOfOperations : Int){
-        while nbOfOperations >= 0 {
+        var i = 0
+        while  i < nbOfOperations {
             let firstOperand = Int.random(in: 0..<100)
             let secondOperand = Int.random(in: 0..<100)
-            let sign = "+-/*".randomElement()
-            //let operation = Operation(firstOperand: firstOperand, secondOperand: secondOperand, sign: sign!)
-            //operations.append(operation)
+            let signTab : [String] = ["+","-","/","*"]
+            let sign = signTab[Int.random(in: 0..<signTab.count - 1)]
+            let operation = Operation(firstOperand: firstOperand, secondOperand: secondOperand, sign: sign)
+            operations.append(operation)
+            i = i + 1
         }
         
     }
