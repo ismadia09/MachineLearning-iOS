@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameViewController" customModule="MachineLearning" customModuleProvider="target">
             <connections>
                 <outlet property="canvasView" destination="HYe-pg-h16" id="ciU-UB-vih"/>
+                <outlet property="clearButton" destination="bbf-qU-2TA" id="hQB-0t-oWd"/>
                 <outlet property="operationsCollectionView" destination="Mvy-NA-Qbr" id="8gf-kv-vtg"/>
                 <outlet property="pageControl" destination="x0W-0a-JVF" id="g6d-FC-laJ"/>
                 <outlet property="validateButton" destination="mmS-zO-02a" id="NdJ-IS-R48"/>
@@ -28,16 +29,6 @@
                     <rect key="frame" x="10" y="335" width="355" height="267"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmS-zO-02a">
-                    <rect key="frame" x="10" y="612" width="355" height="45"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="mCx-e9-pCE"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="validateAction:" destination="-1" eventType="touchUpInside" id="OI1-6F-hXU"/>
-                    </connections>
-                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVa-z4-q5S">
                     <rect key="frame" x="1" y="333" width="373" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,23 +49,51 @@
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="x0W-0a-JVF">
                     <rect key="frame" x="16" y="291" width="343" height="37"/>
                 </pageControl>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="37B-lG-Ku0">
+                    <rect key="frame" x="10" y="612" width="355" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbf-qU-2TA" customClass="RoundedButton" customModule="MachineLearning" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="45"/>
+                            <color key="backgroundColor" red="0.69035071130000003" green="0.0049422015439999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Clear">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="clearCanvas:" destination="-1" eventType="touchUpInside" id="4RN-AF-X4b"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmS-zO-02a" customClass="RoundedButton" customModule="MachineLearning" customModuleProvider="target">
+                            <rect key="frame" x="197.5" y="0.0" width="157.5" height="45"/>
+                            <color key="backgroundColor" red="0.1176470588" green="0.84313725490000002" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Validate">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="validateAction:" destination="-1" eventType="touchUpInside" id="OI1-6F-hXU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="d95-Ez-3fw"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="eVa-z4-q5S" firstAttribute="top" secondItem="x0W-0a-JVF" secondAttribute="bottom" constant="5" id="0zx-QW-F87"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mmS-zO-02a" secondAttribute="bottom" constant="10" id="79K-7W-vpt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="37B-lG-Ku0" secondAttribute="bottom" constant="10" id="H97-Wt-egp"/>
                 <constraint firstItem="eVa-z4-q5S" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Jdd-Fg-Zkz"/>
                 <constraint firstItem="x0W-0a-JVF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Qml-NP-9ju"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mmS-zO-02a" secondAttribute="trailing" constant="10" id="T9M-Wh-BSj"/>
                 <constraint firstItem="x0W-0a-JVF" firstAttribute="top" secondItem="Mvy-NA-Qbr" secondAttribute="bottom" id="UAM-uL-fLz"/>
                 <constraint firstItem="eVa-z4-q5S" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="a8l-yT-l2H"/>
                 <constraint firstItem="HYe-pg-h16" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="dqc-9m-PhO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mvy-NA-Qbr" secondAttribute="trailing" constant="16" id="fPm-UF-mR5"/>
-                <constraint firstItem="mmS-zO-02a" firstAttribute="top" secondItem="HYe-pg-h16" secondAttribute="bottom" constant="10" id="j4y-Dq-ZBk"/>
+                <constraint firstItem="37B-lG-Ku0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="g5c-Wu-mxs"/>
                 <constraint firstItem="eVa-z4-q5S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="1" id="lA1-cY-Mfg"/>
                 <constraint firstItem="x0W-0a-JVF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nll-6J-3wW"/>
-                <constraint firstItem="mmS-zO-02a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="q2K-9I-llu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="37B-lG-Ku0" secondAttribute="trailing" constant="10" id="qZy-3c-f2d"/>
                 <constraint firstItem="Mvy-NA-Qbr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="rr8-rQ-07j"/>
+                <constraint firstItem="37B-lG-Ku0" firstAttribute="top" secondItem="HYe-pg-h16" secondAttribute="bottom" constant="10" id="tWX-qM-Hme"/>
                 <constraint firstItem="HYe-pg-h16" firstAttribute="top" secondItem="eVa-z4-q5S" secondAttribute="bottom" constant="1" id="tkv-zw-p0J"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HYe-pg-h16" secondAttribute="trailing" constant="10" id="xKg-g1-K93"/>
                 <constraint firstItem="Mvy-NA-Qbr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zM2-eK-77L"/>

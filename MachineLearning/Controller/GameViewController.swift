@@ -13,7 +13,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var validateButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var operationsCollectionView: UICollectionView!
-    @IBOutlet weak var canvasView: UIView!
+    @IBOutlet weak var canvasView: CanvasView!
+    @IBOutlet weak var clearButton: RoundedButton!
     var gameTimer : Timer!
     let cellId = "operationsCell"
     let type = "ask"
@@ -36,13 +37,18 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func validateAction(_ sender: Any) {
-        //goToNextOperation()
-        saveUserResponse()
+        goToNextOperation()
+        //saveUserResponse()
+    }
+    @IBAction func clearCanvas(_ sender: Any) {
+        canvasView.clearCanvas()
     }
     func collectionViewSetup(){
         operationsCollectionView.delegate = self
         operationsCollectionView.dataSource = self
         operationsCollectionView.isPagingEnabled = true
+        operationsCollectionView.showsHorizontalScrollIndicator = false
+        operationsCollectionView.isUserInteractionEnabled = false
         let nib = UINib(nibName: "OperationsCollectionViewCell", bundle: nil)
         operationsCollectionView.register(nib, forCellWithReuseIdentifier: cellId)
     }
