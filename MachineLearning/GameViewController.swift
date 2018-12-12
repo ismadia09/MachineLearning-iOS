@@ -13,11 +13,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var validateButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var operationsCollectionView: UICollectionView!
+    @IBOutlet weak var canvasView: UIView!
+    var gameTimer : Timer!
     let cellId = "operationsCell"
+    let type = "ask"
     let space : CGFloat = 30
     var gameLogic = GameLogic()
-    //var item = 0
-    var indexPath = IndexPath(item: 0, section: 0)
+    var answers : [Bool] = []
     var operation : [Operation] = []{
         didSet {
             operationsCollectionView.reloadData()
@@ -34,7 +36,8 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func validateAction(_ sender: Any) {
-        goToNextOperation()
+        //goToNextOperation()
+        saveUserResponse()
     }
     func collectionViewSetup(){
         operationsCollectionView.delegate = self
@@ -68,6 +71,35 @@ class GameViewController: UIViewController {
         operationsCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
 
+    
+    func saveUserResponse(){
+        let image = canvasView.takeScreenshot()
+        guard let imageBase64String = Utlis.convertImageToBase64(image: image) else {
+            return
+        }
+        
+        let expectedResult = operation[pageControl.currentPage].getResult()
+        let number = Number(image: imageBase64String, type: type, expectedResult: expectedResult)
+        Requests.sendDrawnNumbers(number: number) { (result) in
+            if (expectedResult == result){
+                //Le resultat est bon
+                self.answers.append(true)
+                self.canvasView.backgroundColor = UIColor.green
+                
+            }else{
+                self.answers.append(false)
+                self.canvasView.backgroundColor = UIColor.red
+
+            }
+             self.gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.getReadyForAnswer), userInfo: nil, repeats: false)
+        }
+        
+    }
+    
+    @objc func getReadyForAnswer(){
+        self.canvasView.backgroundColor = UIColor.white
+        goToNextOperation()
+    }
     /*
     // MARK: - Navigation
 

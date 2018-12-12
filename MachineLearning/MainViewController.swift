@@ -70,10 +70,12 @@ class MainViewController: UIViewController {
             type = "train"
         }
         
-        let calculResult = Int(valueTrainingTextField.text!)!
+        let expectedResult = Int(valueTrainingTextField.text!)!
         //Requests.sendDrawnNumbers(image: imageBase64String, type: type, expectedResult: calculResult
-        Requests.sendDrawnNumbers(image: imageBase64String, type: type, expectedResult: calculResult) { (result) in
-            if (result == calculResult){
+        let number = Number(image: imageBase64String, type: type, expectedResult: expectedResult)
+
+        Requests.sendDrawnNumbers(number : number) { (result) in
+            if (result == expectedResult){
                 
             }
         }

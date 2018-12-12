@@ -27,6 +27,7 @@
 		5A822EAA21BA869600AC6907 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A822EA821BA869600AC6907 /* GameViewController.xib */; };
 		7A3ED94C21C0067D0070DC38 /* OperationsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3ED94A21C0067D0070DC38 /* OperationsCollectionViewCell.swift */; };
 		7A3ED94D21C0067D0070DC38 /* OperationsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A3ED94B21C0067D0070DC38 /* OperationsCollectionViewCell.xib */; };
+		7AC25F6721C115E600C46CA4 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC25F6621C115E600C46CA4 /* Number.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		78BDC7657EA8A19649EB1AAC /* Pods_MachineLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MachineLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A3ED94A21C0067D0070DC38 /* OperationsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsCollectionViewCell.swift; sourceTree = "<group>"; };
 		7A3ED94B21C0067D0070DC38 /* OperationsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationsCollectionViewCell.xib; sourceTree = "<group>"; };
+		7AC25F6621C115E600C46CA4 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				5A58E37B21B6A195007C70FB /* CanvasView.swift */,
 				5A7390B221BA66E100CE6A86 /* Extensions.swift */,
 				5A822E9D21BA6E9800AC6907 /* Requests.swift */,
+				7AC25F6621C115E600C46CA4 /* Number.swift */,
 				5A822E9F21BA705A00AC6907 /* UidDef.swift */,
 				5A822EA121BA707E00AC6907 /* Utils.swift */,
 				5A822EA321BA77AC00AC6907 /* RoundedView.swift */,
@@ -248,6 +251,7 @@
 			files = (
 				5A7390B321BA66E100CE6A86 /* Extensions.swift in Sources */,
 				5A58E37921B69E59007C70FB /* MainViewController.swift in Sources */,
+				7AC25F6721C115E600C46CA4 /* Number.swift in Sources */,
 				7A3ED94C21C0067D0070DC38 /* OperationsCollectionViewCell.swift in Sources */,
 				5A822EA421BA77AC00AC6907 /* RoundedView.swift in Sources */,
 				5A58E36821B69DC0007C70FB /* ViewController.swift in Sources */,

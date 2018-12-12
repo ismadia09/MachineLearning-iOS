@@ -10,15 +10,15 @@ import Foundation
 import Alamofire
 
 class Requests {
-    static func sendDrawnNumbers(image : String, type : String, expectedResult : Int, completion: @escaping (Int) -> Void){
+    static func sendDrawnNumbers(number : Number, completion: @escaping (Int) -> Void){
         let urlString = "\(UidDef.baseUrlString)"
         guard let url = URL(string: urlString) else {
             return
         }
         let parameters : [String : Any] = [
-            "type":type,
-            "value":expectedResult,
-            "image":image]
+            "type":number.type,
+            "value":number.expectedResult,
+            "image":number.image]
         Alamofire.request(url, method: .post, parameters: parameters).responseJSON { (response) in
             if (response.error != nil){
                 print("ERROR : \(String(describing: response.error))")
