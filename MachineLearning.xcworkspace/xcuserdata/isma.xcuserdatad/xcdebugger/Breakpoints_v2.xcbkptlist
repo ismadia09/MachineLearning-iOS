@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MachineLearning/Controller/MainViewController.swift"
-            timestampString = "566307525.040509"
+            timestampString = "566494244.9760571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MachineLearning/Controller/MainViewController.swift"
-            timestampString = "566307525.040892"
+            timestampString = "566494244.976663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
@@ -218,12 +218,12 @@
                   moduleName = "MachineLearning"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isma/Workspace/iOS/MachineLearning-iOS/MachineLearning/Controller/MainViewController.swift"
-                  timestampString = "566307525.246035"
+                  timestampString = "566494245.086818"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "78"
                   endingLineNumber = "78"
-                  offsetFromSymbolStart = "2632">
+                  offsetFromSymbolStart = "3116">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -233,12 +233,12 @@
                   moduleName = "MachineLearning"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isma/Workspace/iOS/MachineLearning-iOS/MachineLearning/Controller/MainViewController.swift"
-                  timestampString = "566307525.248401"
+                  timestampString = "566494245.089679"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "79"
                   endingLineNumber = "79"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "28">
                </Location>
             </Locations>
          </BreakpointContent>

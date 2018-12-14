@@ -16,6 +16,7 @@ class CanvasView: UIView {
     var path:UIBezierPath!
     var touchPoint:CGPoint!
     var startingPoint:CGPoint!
+    var clearable : Bool = false
     
     override func layoutSubviews() {
         self.clipsToBounds = true // no lines should be visible outside of the view
@@ -51,7 +52,7 @@ class CanvasView: UIView {
     }
     
     func drawShapeLayer() {
-        
+        clearable = true
         let shapeLayer = CAShapeLayer()
         // the shape layer is used to draw along the already created path
         shapeLayer.path = path.cgPath
@@ -68,9 +69,12 @@ class CanvasView: UIView {
     }
     
     func clearCanvas() {
-        path.removeAllPoints()
-        self.layer.sublayers = nil
-        self.setNeedsDisplay()
+        if(clearable){
+            path.removeAllPoints()
+            self.layer.sublayers = nil
+            self.setNeedsDisplay()
+            clearable = false
+        }
     }
     
     

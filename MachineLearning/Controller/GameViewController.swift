@@ -26,10 +26,13 @@ class GameViewController: UIViewController {
             operationsCollectionView.reloadData()
         }
     }
+    var clearable = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Game"
+        //clearable = canvasView.clearable
+        //clearButton.isEnabled = clearable
         collectionViewSetup()
         gameSetup()
         pageContolSetup()
