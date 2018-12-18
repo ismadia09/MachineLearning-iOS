@@ -100,7 +100,7 @@ class GameViewController: UIViewController {
                 self.canvasView.backgroundColor = UIColor.red
 
             }
-             self.gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.getReadyForAnswer), userInfo: nil, repeats: false)
+             self.gameTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.getReadyForAnswer), userInfo: nil, repeats: false)
         }
         
     }

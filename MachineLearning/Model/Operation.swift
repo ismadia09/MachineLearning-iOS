@@ -19,8 +19,8 @@ class Operation{
         self.firstOperand = firstOperand
         self.secondOperand = secondOperand
         self.sign = sign
-        self.result = 0
-        self.operationString = "\(firstOperand) \(sign) \(secondOperand)=?"
+        self.result = 2
+        self.operationString = "\(firstOperand) \(sign) \(secondOperand) = ?"
     }
     
     func getResult() -> Int{

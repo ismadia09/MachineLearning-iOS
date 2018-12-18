@@ -14,10 +14,15 @@ class GameLogic {
     func generateOperations(nbOfOperations : Int){
         var i = 0
         while  i < nbOfOperations {
-            let firstOperand = Int.random(in: 0..<100)
-            let secondOperand = Int.random(in: 0..<100)
             let signTab : [String] = ["+","-","/","*"]
             let sign = signTab[Int.random(in: 0..<signTab.count - 1)]
+            let firstOperand = Int.random(in: 0..<100)
+            var secondOperand = Int.random(in: 0..<100)
+            // avoir des resultat strictements positifs lors des soustractions
+            while (secondOperand > firstOperand && sign.elementsEqual("-")) {
+                secondOperand = Int.random(in: 0..<100)
+            }
+            
             let operation = Operation(firstOperand: firstOperand, secondOperand: secondOperand, sign: sign)
             operations.append(operation)
             i = i + 1
