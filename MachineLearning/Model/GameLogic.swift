@@ -14,7 +14,8 @@ class GameLogic {
     func generateOperations(nbOfOperations : Int){
         var i = 0
         while  i < nbOfOperations {
-            let signTab : [String] = ["+","-","/","*"]
+            //let signTab : [String] = ["+","-","/","*"]
+            let signTab : [String] = ["+","-","*"]
             let sign = signTab[Int.random(in: 0..<signTab.count - 1)]
             let firstOperand = Int.random(in: 0..<100)
             var secondOperand = Int.random(in: 0..<100)
@@ -22,6 +23,15 @@ class GameLogic {
             while (secondOperand > firstOperand && sign.elementsEqual("-")) {
                 secondOperand = Int.random(in: 0..<100)
             }
+            
+            
+          /*  var divRest = firstOperand % secondOperand
+            while (divRest != 0){
+                while (secondOperand > firstOperand && sign.elementsEqual("/")){
+                    secondOperand = Int.random(in: 0..<100)
+                    divRest = firstOperand % secondOperand
+                }
+            }*/
             
             let operation = Operation(firstOperand: firstOperand, secondOperand: secondOperand, sign: sign)
             operations.append(operation)

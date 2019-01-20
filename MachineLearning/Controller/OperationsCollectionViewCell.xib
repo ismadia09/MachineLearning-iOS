@@ -25,12 +25,12 @@
                             <constraint firstAttribute="height" constant="60" id="i9Q-k5-22E"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.4431372549" green="0.23529411759999999" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.63137254901960782" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="msb-m9-MaA" secondAttribute="trailing" id="dcM-2V-HHs"/>
                 <constraint firstItem="msb-m9-MaA" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="vOa-SE-Hcb"/>

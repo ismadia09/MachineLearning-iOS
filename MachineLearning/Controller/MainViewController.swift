@@ -11,13 +11,14 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var trainingSwitch: UISwitch!
-    @IBOutlet weak var canvasView: CanvasView!
+    @IBOutlet weak var canvasView: Canvas!
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var validateButton: UIButton!
     @IBOutlet weak var valueTrainingTextField: UITextField!
     var images : [UIImage] = []
     var image = UIImage()
+    @IBOutlet weak var ocrResultLabel: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
     /*  var imageView : UIImageView = {
@@ -30,7 +31,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Training"
-        self.navigationController?.navigationBar.barTintColor = UIColor.lightGray
+        //self.navigationController?.navigationBar.barTintColor = UIColor.lightGray
         //setupImageView()
         
         // Do any additional setup after loading the view.
@@ -62,6 +63,7 @@ class MainViewController: UIViewController {
     }
     @IBAction func validateAction(_ sender: Any) {
         putImageInImageView()
+        self.ocrResultLabel.text = "Waiting for OCR"
         guard let imageBase64String = Utlis.convertImageToBase64(image: image) else {
             return
         }
@@ -69,23 +71,31 @@ class MainViewController: UIViewController {
         if (trainingSwitch.isOn){
             type = "train"
         }
-        
-        if(!valueTrainingTextField.text!.elementsEqual("") && valueTrainingTextField.text?.count == 1){
-            let expectedResult = Int(valueTrainingTextField.text!)!
-            //Requests.sendDrawnNumbers(image: imageBase64String, type: type, expectedResult: calculResult
-            let number = Number(image: imageBase64String, type: type, expectedResult: expectedResult)
-            
-            Requests.sendDrawnNumbers(number : number) { (result) in
-                if (result == expectedResult){
-                    
-                }
+        var number = Number(image: imageBase64String, type: type, expectedResult: 0)
+        if (type.elementsEqual("train")){
+            if(!valueTrainingTextField.text!.elementsEqual("") && valueTrainingTextField.text?.count == 1){
+                let expectedResult = Int(valueTrainingTextField.text!)!
+                //Requests.sendDrawnNumbers(image: imageBase64String, type: type, expectedResult: calculResult
+                number = Number(image: imageBase64String, type: type, expectedResult: expectedResult)
+                
+            }else{
+                let alert = UIAlertController(title: "Error", message: "Fill valueTraining field", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                return
             }
-        }else{
-            let alert = UIAlertController(title: "Erreur", message: "Veuillez remplir le champ valueTraining", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
         }
+        
+        Requests.sendDrawnNumbers(number : number) { (result) in
+            if (result != -1){
+                self.ocrResultLabel.text = "Result sended by OCR\t:\t\(result)"
+            }else{
+                self.ocrResultLabel.text = "A problem has occured"
+
+            }
+        }
+        
         
     }
     /*

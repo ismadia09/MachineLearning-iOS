@@ -13,7 +13,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var validateButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var operationsCollectionView: UICollectionView!
-    @IBOutlet weak var canvasView: CanvasView!
+    @IBOutlet weak var canvasView: Canvas!
     @IBOutlet weak var clearButton: RoundedButton!
     var gameTimer : Timer!
     let cellId = "operationsCell"
@@ -27,6 +27,8 @@ class GameViewController: UIViewController {
         }
     }
     var clearable = true
+    var resultString = ""
+    var correctAnswerCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +42,8 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func validateAction(_ sender: Any) {
-        goToNextOperation()
-        //saveUserResponse()
+        //goToNextOperation()
+        saveUserResponse()
     }
     @IBAction func clearCanvas(_ sender: Any) {
         canvasView.clearCanvas()
@@ -56,15 +58,17 @@ class GameViewController: UIViewController {
         operationsCollectionView.register(nib, forCellWithReuseIdentifier: cellId)
     }
     func gameSetup(){
+        gameLogic.operations.removeAll()
         gameLogic.generateOperations(nbOfOperations: 5)
         operation = gameLogic.operations
+        correctAnswerCount = 0
     }
     
     func pageContolSetup(){
         pageControl.currentPage = 0
         pageControl.numberOfPages = operation.count
-        pageControl.currentPageIndicatorTintColor = UIColor.magenta
-        pageControl.pageIndicatorTintColor = UIColor.cyan
+        pageControl.currentPageIndicatorTintColor = UIColor.red
+        pageControl.pageIndicatorTintColor = UIColor(red: 247/255, green: 161/255, blue: 54/255, alpha: 1)
     }
 
     func goToNextOperation(){
@@ -73,11 +77,17 @@ class GameViewController: UIViewController {
             pageControl.currentPage = nextPage
         }else{
             nextPage = 0
+            gameSetup()
             pageControl.currentPage = nextPage
+            let alert = UIAlertController(title: "Game ended", message: "\(resultString)", preferredStyle: .alert)
+            let replayAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            alert.addAction(replayAction)
+            self.present(alert, animated: true, completion: nil)
 
         }
         let indexPath = IndexPath(item: nextPage, section: 0)
         operationsCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        canvasView.clearCanvas()
     }
 
     
@@ -94,20 +104,22 @@ class GameViewController: UIViewController {
                 //Le resultat est bon
                 self.answers.append(true)
                 self.canvasView.backgroundColor = UIColor.green
+                self.correctAnswerCount += 1
                 
             }else{
                 self.answers.append(false)
                 self.canvasView.backgroundColor = UIColor.red
 
             }
+             self.resultString = "Correct answers : \(self.correctAnswerCount) on \(self.operation.count)"
              self.gameTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.getReadyForAnswer), userInfo: nil, repeats: false)
         }
         
     }
     
     @objc func getReadyForAnswer(){
-        self.canvasView.backgroundColor = UIColor.white
-        goToNextOperation()
+            self.canvasView.backgroundColor = UIColor.white
+            goToNextOperation()
     }
     /*
     // MARK: - Navigation

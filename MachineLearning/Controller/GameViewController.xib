@@ -25,19 +25,22 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYe-pg-h16" customClass="CanvasView" customModule="MachineLearning" customModuleProvider="target">
-                    <rect key="frame" x="10" y="335" width="355" height="267"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYe-pg-h16" customClass="Canvas" customModule="MachineLearning" customModuleProvider="target">
+                    <rect key="frame" x="10" y="367" width="355" height="200"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="6pR-dj-AQy"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVa-z4-q5S">
-                    <rect key="frame" x="1" y="333" width="373" height="1"/>
+                    <rect key="frame" x="1" y="365" width="373" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="hTk-5G-iyY"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Mvy-NA-Qbr">
-                    <rect key="frame" x="16" y="35" width="343" height="256"/>
+                    <rect key="frame" x="16" y="35" width="343" height="288"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xHa-w8-3oF">
                         <size key="itemSize" width="50" height="50"/>
@@ -47,13 +50,13 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="x0W-0a-JVF">
-                    <rect key="frame" x="16" y="291" width="343" height="37"/>
+                    <rect key="frame" x="16" y="323" width="343" height="37"/>
                 </pageControl>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="37B-lG-Ku0">
-                    <rect key="frame" x="10" y="612" width="355" height="45"/>
+                    <rect key="frame" x="10" y="592" width="355" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbf-qU-2TA" customClass="RoundedButton" customModule="MachineLearning" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="45"/>
+                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="50"/>
                             <color key="backgroundColor" red="0.69035071130000003" green="0.0049422015439999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Clear">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,7 +66,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmS-zO-02a" customClass="RoundedButton" customModule="MachineLearning" customModuleProvider="target">
-                            <rect key="frame" x="197.5" y="0.0" width="157.5" height="45"/>
+                            <rect key="frame" x="197.5" y="0.0" width="157.5" height="50"/>
                             <color key="backgroundColor" red="0.1176470588" green="0.84313725490000002" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Validate">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -74,18 +77,16 @@
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="d95-Ez-3fw"/>
+                        <constraint firstAttribute="height" constant="50" id="d95-Ez-3fw"/>
                     </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="eVa-z4-q5S" firstAttribute="top" secondItem="x0W-0a-JVF" secondAttribute="bottom" constant="5" id="0zx-QW-F87"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="37B-lG-Ku0" secondAttribute="bottom" constant="10" id="H97-Wt-egp"/>
-                <constraint firstItem="eVa-z4-q5S" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Jdd-Fg-Zkz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="37B-lG-Ku0" secondAttribute="bottom" constant="25" id="H97-Wt-egp"/>
                 <constraint firstItem="x0W-0a-JVF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Qml-NP-9ju"/>
                 <constraint firstItem="x0W-0a-JVF" firstAttribute="top" secondItem="Mvy-NA-Qbr" secondAttribute="bottom" id="UAM-uL-fLz"/>
-                <constraint firstItem="eVa-z4-q5S" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="a8l-yT-l2H"/>
                 <constraint firstItem="HYe-pg-h16" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="dqc-9m-PhO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mvy-NA-Qbr" secondAttribute="trailing" constant="16" id="fPm-UF-mR5"/>
                 <constraint firstItem="37B-lG-Ku0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="g5c-Wu-mxs"/>
@@ -93,8 +94,9 @@
                 <constraint firstItem="x0W-0a-JVF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nll-6J-3wW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="37B-lG-Ku0" secondAttribute="trailing" constant="10" id="qZy-3c-f2d"/>
                 <constraint firstItem="Mvy-NA-Qbr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="rr8-rQ-07j"/>
-                <constraint firstItem="37B-lG-Ku0" firstAttribute="top" secondItem="HYe-pg-h16" secondAttribute="bottom" constant="10" id="tWX-qM-Hme"/>
+                <constraint firstItem="37B-lG-Ku0" firstAttribute="top" secondItem="HYe-pg-h16" secondAttribute="bottom" constant="25" id="tWX-qM-Hme"/>
                 <constraint firstItem="HYe-pg-h16" firstAttribute="top" secondItem="eVa-z4-q5S" secondAttribute="bottom" constant="1" id="tkv-zw-p0J"/>
+                <constraint firstAttribute="trailing" secondItem="eVa-z4-q5S" secondAttribute="trailing" constant="1" id="u2f-Yu-XHu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HYe-pg-h16" secondAttribute="trailing" constant="10" id="xKg-g1-K93"/>
                 <constraint firstItem="Mvy-NA-Qbr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zM2-eK-77L"/>
             </constraints>
