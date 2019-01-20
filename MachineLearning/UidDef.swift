@@ -9,5 +9,6 @@
 import Foundation
 
 class UidDef {
-    static let baseUrlString = "http://10.33.254.62:8080"
+    static let baseUrlString = "http://blvfmgfnjh5ij5ovack6lo.webrelay.io/"
+    //static let baseUrlString = "http://172.20.10.4:8080"
 }

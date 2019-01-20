@@ -25,7 +25,13 @@ class Requests {
             }
             
             if let json = response.result.value as? [String : Any]{
-                
+                print(json)
+                //let result = json["ocr"] as! Int
+                if let v = json["ocr"] as? String, let val = Int(v) {
+                    completion(val)
+                    return
+                }
+                completion(-1)
             }
         }
         
